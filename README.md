@@ -2,6 +2,12 @@
 
 Extend Konf with required keys
 
+## Rationale
+
+It's very annoying when configuration files get out of sync, i.e.: you have a developer's `config.yml` that is ignored, `config.yml.sample` checked-in and another `config.yml` on the production box. Problems arise when the developer, when adding a new key, forgets to update `.sample` file or the production config and the code & configuration is out of sync.
+
+This gem extends Konf to fail when there is a discrepancy between the required list of keys and the actual configuration file content.
+
 ## Example
 
 Based on <https://github.com/GBH/konf#usage>
