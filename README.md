@@ -14,16 +14,15 @@ Based on <https://github.com/GBH/konf#usage>
 
 ```yaml
 development:
-  admin:
-    name: Dev
-    email: dev@test.test
+  name: Dev
+  email: dev@test.test
 ```
 
 You can read the file like usual with Konf:
 
 ```ruby
 config = StrictKonf.new('configuration.yml', 'development', [:name, :email])
-config.admin.name # => Dev
+config.name # => Dev
 ```
 
 It will fail when you have too much or too few keys in your configuration:
