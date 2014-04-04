@@ -28,7 +28,7 @@ config.development.admin.name # => Dev
 
 It will fail when you have too much or too few keys in your configuration:
 
-```
+```ruby
 StrictKonf.new('configuration.yml', nil, [:name])                # raises NotFound error
 StrictKonf.new('configuration.yml', nil, [:name, :email, :role]) # raises UnknownKeys error
 ```
