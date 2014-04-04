@@ -17,7 +17,7 @@ You can read the file like usual with Konf:
 
 ```ruby
 config = StrictKonf.new('configuration.yml', nil, [:name, :email])
-config.development.name # => Dev
+config.development.admin.name # => Dev
 ```
 
 It will fail when you have too much or too few keys in your configuration:
