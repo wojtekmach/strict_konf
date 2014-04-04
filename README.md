@@ -1,20 +1,41 @@
 # StrictKonf
 
-TODO: Write a gem description
+Extend Konf with required keys
+
+## Example
+
+Based on <https://github.com/GBH/konf#usage>
+
+```yaml
+development:
+  admin:
+    name: Dev
+    email: dev@test.test
+```
+
+You can read the file like usual with Konf:
+
+```ruby
+config = StrictKonf.new('configuration.yml', nil, [:name, :email])
+config.development.name # => Dev
+```
+
+It will fail when you have too much or too few keys in your configuration:
+
+```
+StrictKonf.new('configuration.yml', nil, [:name])                # raises NotFound error
+StrictKonf.new('configuration.yml', nil, [:name, :email, :role]) # raises UnknownKeys error
+```
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'strict_konf'
+    gem 'strict_konf', github: 'wojtekmach/strict_konf'
 
 And then execute:
 
     $ bundle
-
-Or install it yourself as:
-
-    $ gem install strict_konf
 
 ## Usage
 
