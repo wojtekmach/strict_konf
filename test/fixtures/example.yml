@@ -1,0 +1,6 @@
+development:
+  foo: 42
+  bar: 1024
+
+test:
+  foo: 42
