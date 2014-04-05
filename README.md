@@ -36,19 +36,17 @@ StrictKonf.new('configuration.yml', 'development', [:name, :email, :role]) # rai
 
 Add this line to your application's Gemfile:
 
-    gem 'strict_konf', github: 'wojtekmach/strict_konf'
+```ruby
+gem 'strict_konf', github: 'wojtekmach/strict_konf'
+```
 
 And then execute:
 
     $ bundle
 
-## Usage
-
-TODO: Write usage instructions here
-
 ## Contributing
 
-1. Fork it ( http://github.com/<my-github-username>/strict_konf/fork )
+1. Fork it ( http://github.com/wojtekmach/strict_konf/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
