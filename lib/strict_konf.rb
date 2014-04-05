@@ -1,9 +1,9 @@
 require "konf"
 
 class StrictKonf < Konf
-  class UnknownKeys < StandardError; end
-
   VERSION = '0.0.1'
+
+  class UnknownKeys < StandardError; end
 
   def initialize(source, root, required_keys)
     super(source, root)
