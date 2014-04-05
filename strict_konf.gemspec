@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'strict_konf'
+version = File.read(File.dirname(__FILE__) + '/VERSION').strip
 
 Gem::Specification.new do |spec|
   spec.name          = "strict_konf"
-  spec.version       = StrictKonf::VERSION
+  spec.version       = version
   spec.authors       = ["Wojtek Mach"]
   spec.email         = ["wojtek@wojtekmach.pl"]
   spec.summary       = "Extend Konf to require/whitelist fields"

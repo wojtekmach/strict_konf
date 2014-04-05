@@ -1,7 +1,7 @@
 require "konf"
 
 class StrictKonf < Konf
-  VERSION = '0.0.1'
+  VERSION = File.read(File.dirname(__FILE__) + '/../VERSION').strip
 
   class UnknownKeys < StandardError; end
 
