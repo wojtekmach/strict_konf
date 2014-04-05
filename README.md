@@ -2,6 +2,8 @@
 
 Extend Konf with required keys
 
+[![Build Status](http://img.shields.io/travis/wojtekmach/strict_konf.svg)][travis]
+
 ## Rationale
 
 It's very annoying when configuration files get out of sync, i.e.: you have a developer's `config.yml` that is ignored, `config.yml.sample` checked-in and another `config.yml` on the production box. Problems arise when the developer, when adding a new key, forgets to update `.sample` file or the production config and the code & configuration is out of sync.
