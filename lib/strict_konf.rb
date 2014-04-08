@@ -7,7 +7,7 @@ class StrictKonf < Konf
 
   def initialize(source, root, required_keys)
     super(source, root)
-    @required_keys = required_keys
+    @required_keys = required_keys.map(&:to_s)
 
     validate_required_keys
     validate_provided_keys
@@ -20,7 +20,7 @@ class StrictKonf < Konf
   end
 
   def validate_provided_keys
-    extra = keys.map(&:to_sym) - @required_keys
+    extra = keys - @required_keys
     if extra.any?
       raise UnknownKeys, "Unknown keys in config: #{extra}"
     end
