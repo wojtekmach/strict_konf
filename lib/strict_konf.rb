@@ -9,8 +9,8 @@ class StrictKonf < Konf
     super(source, root)
     @required_keys = required_keys
 
-    validate_required_keys
-    validate_provided_keys
+    _validate_required_keys
+    _validate_provided_keys
   end
 
   def method_missing(name, *args, &block)
@@ -24,7 +24,7 @@ class StrictKonf < Konf
 
   private
 
-  def validate_required_keys
+  def _validate_required_keys
     keys = @required_keys
     keys = keys.keys if keys.is_a? Hash
 
@@ -35,7 +35,7 @@ class StrictKonf < Konf
     }
   end
 
-  def validate_provided_keys
+  def _validate_provided_keys
     required = @required_keys
     required = required.keys if keys.is_a? Hash
     required = required.map { |key| key.is_a?(Hash) ? key.keys : key }
