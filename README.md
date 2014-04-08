@@ -36,13 +36,11 @@ StrictKonf.new('configuration.yml', 'development', [:name])                # rai
 StrictKonf.new('configuration.yml', 'development', [:name, :email, :role]) # raises NotFound error
 ```
 
-It also supports nested hashes:
+It also supports nested hashes. We can pass `nil` to start from the root of the hash:
 
 ```ruby
 StrictKonf.new('configuration.yml', nil, development: [:name, :email])
 ```
-
-Here we set `root` to `nil` so that we have to mimic the sructure of the hash: `development: [:name, :email]`
 
 ## Installation
 
