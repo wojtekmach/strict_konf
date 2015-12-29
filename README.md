@@ -47,9 +47,9 @@ StrictKonf.new('configuration.yml', nil, development: [:name, :email])
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'strict_konf', github: 'wojtekmach/strict_konf'
+gem 'strict_konf'
 ```
 
 And then execute:
 
-    $ bundle
+    $ bundle install
