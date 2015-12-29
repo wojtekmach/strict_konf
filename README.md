@@ -29,7 +29,7 @@ config = StrictKonf.new('configuration.yml', 'development', [:name, :email])
 config.name # => Dev
 ```
 
-It will fail when you have too much or too few keys in your configuration:
+It will fail when you have too many or too few keys in your configuration:
 
 ```ruby
 StrictKonf.new('configuration.yml', 'development', [:name])                # raises UnknownKeys error
