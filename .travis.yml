@@ -4,3 +4,4 @@ rvm:
   - rbx
 
 sudo: false
+cache: bundler
