@@ -1,7 +1,7 @@
 rvm:
-  - 2.0.0
-  - 2.3.0
-  - rbx
+- 2.3
+- rbx
 
 sudo: false
 cache: bundler
+script: RUBYOPT="-w $RUBYOPT" bundle exec rake
