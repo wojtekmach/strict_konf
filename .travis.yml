@@ -1,6 +1,5 @@
 rvm:
 - 2.3
-- rbx
 
 sudo: false
 cache: bundler
